@@ -31,7 +31,7 @@ For more detailed examples, function explanations, and advanced usage scenarios,
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](link_to_contributing_guidelines).
+We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](https://github.com/Tinny-Robot/DimSense/CONTRIBUTING.md).
 
 ## License
 
