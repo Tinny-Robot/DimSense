@@ -1,8 +1,11 @@
 """
-Feature Selection Methods DimSense
+Feature Selection Methods for DimSense
 """
 
-from sklearn.feature_selection import SelectKBest, f_classif, mutual_info_classif
+from sklearn.feature_selection import SelectKBest, f_classif, mutual_info_classif, chi2, RFE, SelectFromModel
+from sklearn.feature_selection import VarianceThreshold
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 
 class FeatureSelector:
     """
@@ -14,7 +17,7 @@ class FeatureSelector:
         Initialize the FeatureSelector.
 
         Parameters:
-        - method (str): Feature selection method to use ('select_k_best', 'mutual_info').
+        - method (str): Feature selection method to use ('select_k_best', 'mutual_info', 'chi2', 'rfe', 'variance', 'random_forest', 'lasso').
         - num_features (int): Number of features to select.
         """
         self.method = method
@@ -35,6 +38,18 @@ class FeatureSelector:
             selector = SelectKBest(score_func=f_classif, k=self.num_features)
         elif self.method == 'mutual_info':
             selector = SelectKBest(score_func=mutual_info_classif, k=self.num_features)
+        elif self.method == 'chi2':
+            selector = SelectKBest(score_func=chi2, k=self.num_features)
+        elif self.method == 'rfe':
+            estimator = RandomForestClassifier(n_estimators=10)
+            selector = RFE(estimator, n_features_to_select=self.num_features)
+        elif self.method == 'variance':
+            selector = VarianceThreshold(threshold=(.8 * (1 - .8)))
+        elif self.method == 'random_forest':
+            estimator = RandomForestClassifier(n_estimators=10)
+            selector = RFE(estimator, n_features_to_select=self.num_features)
+        elif self.method == 'lasso':
+            selector = SelectFromModel(LogisticRegression(penalty='l1', C=0.01))
         else:
             raise ValueError(f"Unsupported feature selection method: {self.method}")
 

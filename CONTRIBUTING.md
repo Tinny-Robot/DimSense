@@ -59,6 +59,12 @@ By participating in this project, you agree to abide by the [Code of Conduct](ht
 
 If you have any questions, encounter issues, or need assistance, please feel free to reach out to us via GitHub issues or by contacting [handanfoun@gmail.com](mailto:handanfoun@gmail.com).
 
+## Community
+
+Discussions about the Open Source Guides take place on this repository's [Issues](https://github.com/github/opensource.guide/issues) and [Pull Requests](https://github.com/github/opensource.guide/pulls) sections. Anybody is welcome to join these conversations.
+
+Wherever possible, do not take these conversations to private channels, including contacting the maintainers directly. Keeping communication public means everybody can benefit and learn from the conversation.
+
 Thank you for your contribution!
 
 — The DimSense Team
