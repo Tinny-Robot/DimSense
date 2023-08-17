@@ -79,6 +79,11 @@ coverage report -m
 
 Happy testing with DimSense!
 
+## Changelog
+
+For a complete list of changes and versions, please refer to the [Changelog](CHANGELOG.md).
+
+
 ## License
 
 DimSense is released under the [MIT License](link_to_license).
