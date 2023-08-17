@@ -2,37 +2,46 @@
 Feature Extraction Methods for DimSense
 """
 
+import numpy as np
+import tensorflow as tf
 from sklearn.decomposition import PCA, FastICA
 from sklearn.manifold import TSNE
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
-class AutoencoderExtractor:
+class AutoencoderExtractor(BaseEstimator, TransformerMixin):
     """
     AutoencoderExtractor provides feature extraction using autoencoders.
     """
-    import numpy as np
-    import tensorflow as tf
-
-    def __init__(self, encoding_dim=2):
+    def __init__(self, encoding_dim=10):
         """
         Initialize the AutoencoderExtractor.
 
         Parameters:
         - encoding_dim (int): Dimension of the encoded representation.
         """
+        self.tf = None 
         self.encoding_dim = encoding_dim
-        self.autoencoder = self.build_autoencoder()
+
+    def _import_tensorflow(self):
+        try:
+            import tensorflow as tf
+            self.tf = tf
+        except ImportError:
+            raise ImportError("TensorFlow is required for using AutoencoderExtractor.")      
 
     def build_autoencoder(self):
-        input_layer = tf.keras.layers.Input(shape=(X.shape[1],))
-        encoded = tf.keras.layers.Dense(self.encoding_dim, activation='relu')(input_layer)
-        decoded = tf.keras.layers.Dense(X.shape[1], activation='sigmoid')(encoded)
-        autoencoder = tf.keras.models.Model(input_layer, decoded)
-        autoencoder.compile(optimizer='adam', loss='mean_squared_error')
-        return autoencoder
+        if self.tf is not None:
+            input_layer = self.tf.keras.layers.Input(shape=(self.input_dim,))
+            encoded = tf.keras.layers.Dense(self.encoding_dim, activation='relu')(input_layer)
+            decoded = tf.keras.layers.Dense(self.input_dim, activation='sigmoid')(encoded)
+            autoencoder = tf.keras.models.Model(input_layer, decoded)
+            autoencoder.compile(optimizer='adam', loss='mean_squared_error')
+            return autoencoder
+        else: return None
 
     def fit_transform(self, X):
         """
@@ -44,6 +53,10 @@ class AutoencoderExtractor:
         Returns:
         - X_extracted (array-like): Extracted features.
         """
+        if self.tf is None:
+            self._import_tensorflow()
+        self.input_dim = X.shape[1]
+        self.autoencoder = self.build_autoencoder()
         self.autoencoder.fit(X, X, epochs=50, batch_size=32, shuffle=True, verbose=0)
         encoder = tf.keras.models.Model(inputs=self.autoencoder.input, outputs=self.autoencoder.layers[1].output)
         X_extracted = encoder.predict(X)
