@@ -27,11 +27,11 @@ selector = FeatureSelector(method='select_k_best', num_features=10)
 X_selected = selector.fit_transform(X, y)
 ```
 
-For more detailed examples, function explanations, and advanced usage scenarios, refer to our [documentation](link_to_your_documentation).
+For more detailed examples, function explanations, and advanced usage scenarios, refer to our [documentation](docs/index.md).
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](https://github.com/Tinny-Robot/DimSense/CONTRIBUTING.md).
+We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
 
 ## Testing
@@ -86,7 +86,7 @@ For a complete list of changes and versions, please refer to the [Changelog](CHA
 
 ## License
 
-DimSense is released under the [MIT License](link_to_license).
+DimSense is released under the [MIT License](LICENSE).
 
 ## Contact
 
