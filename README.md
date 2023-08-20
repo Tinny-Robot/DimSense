@@ -27,7 +27,7 @@ selector = FeatureSelector(method='select_k_best', num_features=10)
 X_selected = selector.fit_transform(X, y)
 ```
 
-For more detailed examples, function explanations, and advanced usage scenarios, refer to our [documentation](link_to_your_documentation).
+For more detailed examples, function explanations, and advanced usage scenarios, refer to our [documentation](docs/index.md).
 
 ## Contributing
 
