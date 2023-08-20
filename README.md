@@ -31,7 +31,7 @@ For more detailed examples, function explanations, and advanced usage scenarios,
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](https://github.com/Tinny-Robot/DimSense/CONTRIBUTING.md).
+We welcome contributions from the community! If you'd like to contribute to DimSense, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
 
 ## Testing
@@ -81,7 +81,7 @@ Happy testing with DimSense!
 
 ## License
 
-DimSense is released under the [MIT License](link_to_license).
+DimSense is released under the [MIT License](LICENSE).
 
 ## Contact
 
