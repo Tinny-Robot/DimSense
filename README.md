@@ -81,12 +81,12 @@ Happy testing with DimSense!
 
 ## Changelog
 
-For a complete list of changes and versions, please refer to the [Changelog](CHANGELOG.md).
+For a complete list of changes and versions, please refer to the [Changelog](https://github.com/Tinny-Robot/DimSense/blob/main/CHANGELOG.md).
 
 
 ## License
 
-DimSense is released under the [MIT License](LICENSE).
+DimSense is released under the [MIT License](https://github.com/Tinny-Robot/DimSense/blob/main/LICENSE).
 
 ## Contact
 

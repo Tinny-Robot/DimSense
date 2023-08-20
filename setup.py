@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="dimsense",
-    version="0.1.1",
+    version="0.1.2",
     author="Nathaniel Handan",
     author_email="handanfoun@gmail.com",
     description="A feature selection and extraction library",
