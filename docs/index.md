@@ -56,4 +56,4 @@ DimSense is an open-source project, and contributions are welcome! If you have i
 
 ## Version
 
-DimSense v0.1.0
+DimSense v0.1.2
