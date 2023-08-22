@@ -39,11 +39,11 @@ print("Selected features shape:", X_selected.shape)
 
 ## Usage Tips
 
-- Choose the appropriate feature selection method based on your data type and problem.
-- Experiment with different numbers of selected features to find the optimal configuration.
+- Depending on your data format and situation, pick the appropriate feature selection approach.
+- Try out several combinations of the chosen attributes to determine the best arrangement.
 
 ## Next Steps
 
 The "DimSense" library offers a variety of feature extraction methods as well. For more details on each method and their usage, refer to the [Feature Extraction Methods](feature_extraction.md) documentation.
 
-Keep in mind that the right feature selection approach depends on your specific use case and data characteristics. Use these methods to enhance your machine learning workflows and improve model performance.
+Bear in mind that your unique use case and data characteristics will determine the best feature selection strategy. Make use of these techniques to strengthen your machine learning processes and boost model performance.
