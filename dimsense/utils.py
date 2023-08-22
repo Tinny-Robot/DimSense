@@ -71,7 +71,7 @@ def detect_outliers(X):
 
 def validate_data(X, y=None):
     """
-    Validate data integrity and dimensions.
+    Validate dimensions and data integrity.
 
     Parameters:
     - X (array-like): Input data.

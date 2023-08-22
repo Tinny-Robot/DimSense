@@ -16,7 +16,7 @@ from test_feature_extraction import TestPCAExtractor, TestTSNEExtractor, TestTFI
 # Create a test suite
 test_suite = unittest.TestSuite()
 
-# Add test classes from feature selection and feature extraction
+# Add test classes from feature extraction and feature selection
 test_suite.addTest(unittest.makeSuite(TestFeatureSelector))
 test_suite.addTest(unittest.makeSuite(TestPCAExtractor))
 test_suite.addTest(unittest.makeSuite(TestTSNEExtractor))

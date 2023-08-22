@@ -3,13 +3,15 @@ import unittest
 from dimsense.feature_extraction import PCAExtractor, TSNEExtractor, TFIDFExtractor, CountVectorizerExtractor, LatentDirichletAllocationExtractor, FastICAExtractor, AutoencoderExtractor
 from sklearn.datasets import load_iris
 
+
+# Classes
 class TestPCAExtractor(unittest.TestCase):
     def test_fit_transform(self):
         # Generate synthetic data
         np.random.seed(42)
         X = np.random.rand(100, 5)
         
-        # Initialize PCAExtractor
+        # Initialize the PCAExtractor
         extractor = PCAExtractor(num_components=2)
         
         # Test fit_transform
