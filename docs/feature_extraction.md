@@ -1,6 +1,6 @@
 # Feature Extraction Methods
 
-The "DimSense" library provides various feature extraction methods to transform your data into a lower-dimensional representation. These methods can be useful for reducing the complexity of your data while retaining essential information.
+The "DimSense" libary offers a variety of feature extraction techniques to reduce the dimension of your data. These techniques can help you simplify your data while keeping the most important details.
 
 ## PCAExtractor
 

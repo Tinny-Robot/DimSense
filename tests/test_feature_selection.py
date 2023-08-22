@@ -5,7 +5,7 @@ from sklearn.datasets import load_iris
 
 class TestFeatureSelector(unittest.TestCase):
     def test_select_k_best(self):
-        # Load Iris dataset
+        # Load iris dataset
         iris = load_iris()
         X = iris.data
         y = iris.target
@@ -19,7 +19,7 @@ class TestFeatureSelector(unittest.TestCase):
         self.assertEqual(X_selected.shape[1], 2)
         
     def test_rfe(self):
-        # Load Iris dataset
+        # Load iris dataset
         iris = load_iris()
         X = iris.data
         y = iris.target
