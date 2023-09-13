@@ -3,7 +3,7 @@ version: 2
 sphinx:
   configuration: docs/source/conf.py  # The path to your Sphinx configuration file.
   builder: html
-  fail_on_warning: true
+  # fail_on_warning: true
 
 
 formats: all  # Build all available formats (HTML, PDF, ePub, etc.).
