@@ -25,15 +25,6 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-# -- Options for HTML output -------------------------------------------------
-
-html_theme_options = {
-    'display_version': True,
-    'prev_next_buttons_location': 'bottom',
-}
-
-# -- Options for HTMLHelp output ---------------------------------------------
-
 htmlhelp_basename = 'DimSensedoc'
 
 # -- Extension configuration -------------------------------------------------
