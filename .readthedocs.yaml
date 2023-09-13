@@ -8,8 +8,8 @@ sphinx:
 
 formats: all  # Build all available formats (HTML, PDF, ePub, etc.).
 
-search: true  # Enable Read the Docs search functionality.
+#search: true  # Enable Read the Docs search functionality.
 
-python:
-   install:
-   - requirements: docs/requirements.txt
+#python:
+#   install:
+#   - requirements: docs/requirements.txt
