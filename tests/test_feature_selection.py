@@ -1,4 +1,3 @@
-import numpy as np
 import unittest
 from dimsense.feature_selection import FeatureSelector
 from sklearn.datasets import load_iris
