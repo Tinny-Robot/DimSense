@@ -1,5 +1,8 @@
 # DimSense: Feature Selection and Extraction Library
 
+[![Downloads](https://static.pepy.tech/badge/dimsense)](https://pepy.tech/project/dimsense) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 DimSense is a Python library designed to streamline the process of feature selection and extraction in machine learning projects. Whether you're working with large datasets or aiming to enhance model performance, DimSense offers a collection of methods to help you identify crucial features and reduce dimensionality effectively.
 
 ## Installation
@@ -24,7 +27,7 @@ X, y = load_dataset()
 selector = FeatureSelector(method='select_k_best', num_features=10)
 
 # Fit and transform the data
-X_selected = selector.fit_transform(X, y)
+X_transformed = selector.fit_transform(X, y)
 ```
 
 For more detailed examples, function explanations, and advanced usage scenarios, refer to our [documentation](https://github.com/Tinny-Robot/DimSense/blob/main/docs/index.md).
